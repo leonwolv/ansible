@@ -1,0 +1,10 @@
+---
+- hosts: linux
+  become: true
+  tasks:
+   - name: upgrade debian and ubuntu
+     apt:
+       state: latest
+       updater_cache: yes
+       force_apt_get: yes
+       
